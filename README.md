@@ -12,7 +12,7 @@ composer require jbennecker/silverstripe-analytics
 
 ## 3. Enter your credentials
 
-Go to Admin Settings > Tracking and enter your Google Analytics tracking ID as well as your Cookiebot ID.
+Go to Admin > Settings > Tracking and enter your Google Analytics ID and your Cookiebot ID.
 
 ## 4. Include the tracking code in your template
 
