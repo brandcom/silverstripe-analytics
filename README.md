@@ -18,4 +18,6 @@ Go to Admin > Settings > Tracking and enter your Google Analytics ID and your Co
 
 Put this at the top of your `<head>`.
 
-`<% include Tracking %>`
+```
+<% include Tracking %>
+```
