@@ -1,5 +1,6 @@
 <?php
 
+use SilverStripe\View\Parsers\ShortcodeParser;
 
 ShortcodeParser::get('default')->register('cookiedeclaration',
     function ($arguments, $content = null, $parser, $shortcode) {
