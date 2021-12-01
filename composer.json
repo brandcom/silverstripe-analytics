@@ -1,0 +1,17 @@
+{
+    "name": "jbennecker/silverstripe-analytics",
+    "license": "MIT",
+    "description": "",
+    "type": "silverstripe-vendormodule",
+    "keywords": [
+        "silverstripe"
+    ],
+    "require": {
+        "silverstripe/framework": "^4"
+    },
+    "autoload": {
+        "psr-4": {
+            "jbennecker\\Analytics\\": "src/"
+        }
+    }
+}
