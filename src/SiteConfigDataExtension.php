@@ -8,13 +8,15 @@ use SilverStripe\ORM\DataExtension;
 class SiteConfigDataExtension extends DataExtension
 {
     private static $db = [
-        'GaTrackingId' => 'Varchar',
         'CookiebotId' => 'Varchar',
+        'GaTrackingId' => 'Varchar',
+        'ThemeColor' => 'Varchar',
     ];
 
     public function updateCMSFields(FieldList $fields)
     {
         $fields->addFieldToTab("Root.Tracking", new TextField("CookiebotId"));
         $fields->addFieldToTab("Root.Tracking", new TextField("GaTrackingId"));
+        $fields->addFieldToTab("Root.Tracking", new TextField("ThemeColor"));
     }
 }
