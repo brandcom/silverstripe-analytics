@@ -1,21 +1,23 @@
 <% if $SiteConfig.CookiebotId %>
-    <style>
-        #CybotCookiebotDialogFooter #CybotCookiebotDialogBodyButtonAccept, #CybotCookiebotDialogFooter #CybotCookiebotDialogBodyLevelButtonAccept, #CybotCookiebotDialogFooter #CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll {
-            background-color: $SiteConfig.ThemeColor !important;
-            border-color: $SiteConfig.ThemeColor !important;
-        }
+    <% if $SiteConfig.ThemeColor %>
+        <style>
+            #CybotCookiebotDialogFooter #CybotCookiebotDialogBodyButtonAccept, #CybotCookiebotDialogFooter #CybotCookiebotDialogBodyLevelButtonAccept, #CybotCookiebotDialogFooter #CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll {
+                background-color: $SiteConfig.ThemeColor !important;
+                border-color: $SiteConfig.ThemeColor !important;
+            }
 
-        #CybotCookiebotDialogFooter .CybotCookiebotDialogBodyButton {
-            border: 2px solid $SiteConfig.ThemeColor !important;
-        }
+            #CybotCookiebotDialogFooter .CybotCookiebotDialogBodyButton {
+                border: 2px solid $SiteConfig.ThemeColor !important;
+            }
 
-        #CybotCookiebotDialog #CybotCookiebotDialogBodyContentText a, #CybotCookiebotDialog #CybotCookiebotDialogBodyLevelButtonIABHeaderViewPartnersLink, #CybotCookiebotDialog #CybotCookiebotDialogDetailBulkConsentList dt a, #CybotCookiebotDialog #CybotCookiebotDialogDetailFooter a, #CybotCookiebotDialog .CybotCookiebotDialogBodyLevelButtonIABDescription a, #CybotCookiebotDialog .CybotCookiebotDialogDetailBodyContentCookieLink, #CybotCookiebotDialogDetailBodyContentTextAbout a {
-            color: $SiteConfig.ThemeColor !important;
-        }
-        #CybotCookiebotDialog.CybotEdge #CybotCookiebotDialogBodyEdgeMoreDetails a {
-            color: $SiteConfig.ThemeColor !important;
-        }
-    </style>
+            #CybotCookiebotDialog #CybotCookiebotDialogBodyContentText a, #CybotCookiebotDialog #CybotCookiebotDialogBodyLevelButtonIABHeaderViewPartnersLink, #CybotCookiebotDialog #CybotCookiebotDialogDetailBulkConsentList dt a, #CybotCookiebotDialog #CybotCookiebotDialogDetailFooter a, #CybotCookiebotDialog .CybotCookiebotDialogBodyLevelButtonIABDescription a, #CybotCookiebotDialog .CybotCookiebotDialogDetailBodyContentCookieLink, #CybotCookiebotDialogDetailBodyContentTextAbout a {
+                color: $SiteConfig.ThemeColor !important;
+            }
+            #CybotCookiebotDialog.CybotEdge #CybotCookiebotDialogBodyEdgeMoreDetails a {
+                color: $SiteConfig.ThemeColor !important;
+            }
+        </style>
+    <% end_if %>
     <script
         id="Cookiebot"
         src="https://consent.cookiebot.com/uc.js"
