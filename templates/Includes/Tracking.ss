@@ -23,7 +23,6 @@
         src="https://consent.cookiebot.com/uc.js"
         data-cbid="$SiteConfig.CookiebotId"
         data-blockingmode="auto"
-        type="text/javascript"
     ></script>
 <% end_if %>
 
