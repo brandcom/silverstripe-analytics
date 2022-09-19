@@ -11,7 +11,6 @@ class SiteConfigDataExtension extends DataExtension
         'CookiebotId' => 'Varchar',
         'GaTrackingId' => 'Varchar',
         'MatomoTrackingId' => 'Varchar',
-        'ThemeColor' => 'Varchar',
     ];
 
     public function updateCMSFields(FieldList $fields)
@@ -19,6 +18,5 @@ class SiteConfigDataExtension extends DataExtension
         $fields->addFieldToTab("Root.Tracking", new TextField("CookiebotId"));
         $fields->addFieldToTab("Root.Tracking", new TextField("GaTrackingId"));
         $fields->addFieldToTab("Root.Tracking", new TextField("MatomoTrackingId"));
-        $fields->addFieldToTab("Root.Tracking", new TextField("ThemeColor"));
     }
 }
