@@ -10,6 +10,7 @@ class SiteConfigDataExtension extends DataExtension
     private static $db = [
         'CookiebotId' => 'Varchar',
         'GaTrackingId' => 'Varchar',
+        'MatomoTrackingId' => 'Varchar',
         'ThemeColor' => 'Varchar',
     ];
 
@@ -17,6 +18,7 @@ class SiteConfigDataExtension extends DataExtension
     {
         $fields->addFieldToTab("Root.Tracking", new TextField("CookiebotId"));
         $fields->addFieldToTab("Root.Tracking", new TextField("GaTrackingId"));
+        $fields->addFieldToTab("Root.Tracking", new TextField("MatomoTrackingId"));
         $fields->addFieldToTab("Root.Tracking", new TextField("ThemeColor"));
     }
 }

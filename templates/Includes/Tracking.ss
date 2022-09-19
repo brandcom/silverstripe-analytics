@@ -43,3 +43,15 @@
         gtag('config', '$SiteConfig.GaTrackingId', {'anonymize_ip': true});
     </script>
 <% end_if %>
+
+<% if $SiteConfig.MatomoTrackingId %>
+    <script
+        data-cookieconsent="statistics"
+        type="text/plain"
+    >
+        var _mtm = window._mtm = window._mtm || [];
+        _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src='https://stats.brandcom.de/js/container_$MatomoTrackingId.js'; s.parentNode.insertBefore(g,s);
+    </script>
+<% end_if %>
