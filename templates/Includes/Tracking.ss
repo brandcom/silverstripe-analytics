@@ -9,21 +9,18 @@
 <% end_if %>
 
 <% if $SiteConfig.GaTrackingId %>
-    <script
-        async
-        data-cookieconsent="statistics"
-        src="https://www.googletagmanager.com/gtag/js?id=$SiteConfig.GaTrackingId"
-        type="text/plain"
-    ></script>
+    <!-- Google Tag Manager -->
     <script
         data-cookieconsent="statistics"
         type="text/plain"
     >
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '$SiteConfig.GaTrackingId', {'anonymize_ip': true});
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5KJKLT7');
     </script>
+    <!-- End Google Tag Manager -->
 <% end_if %>
 
 <% if $SiteConfig.MatomoTrackingId %>
