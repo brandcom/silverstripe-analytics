@@ -18,8 +18,7 @@
     <!-- End Google Consent Mode-->
 <% end_if %>
 <% if $SiteConfig.CookiebotId %>
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="$SiteConfig.CookiebotId"
-            type="text/javascript" async></script>
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="$SiteConfig.CookiebotId" async></script>
 <% end_if %>
 <% if $SiteConfig.GoogleTagManagerID %>
     <!-- Google Tag Manager -->
