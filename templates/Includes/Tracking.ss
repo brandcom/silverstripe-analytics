@@ -22,10 +22,7 @@
 <% end_if %>
 <% if $SiteConfig.GoogleTagManagerID %>
     <!-- Google Tag Manager -->
-    <script
-        data-cookieconsent="statistics"
-        type="text/plain"
-    >
+    <script data-cookieconsent="statistics" type="text/plain">
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -42,5 +39,16 @@
         var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
         g.async=true; g.src='https://stats.brandcom.de/js/container_$SiteConfig.MatomoTagManagerContainerId\.js'; s.parentNode.insertBefore(g,s);
     </script>
+    <% if $SiteConfig.CookiebotId %>
+        <script data-cookieconsent="ignore">
+            window.addEventListener("CookiebotOnConsentReady", function () {
+                var C = Cookiebot.consent,
+                    c = ["preferences", "statistics", "marketing"];
+                function m(a) {_mtm.push({event: "cookie_consent_" + a})}
+                c.forEach(function (i) {C[i] && m(i)})
+            })
+        </script>
+    <% end_if %>
+
     <!-- End Matomo Tag Manager -->
 <% end_if %>
