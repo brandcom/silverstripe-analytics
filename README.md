@@ -1,39 +1,42 @@
 # silverstripe-analytics
 
-# Installation
+## Installation
 
-## 1. Install silverstripe-analytics
+### 1. Installiere das Analytics-Plugin mit Composer
 
 ```
-composer require jbennecker/silverstripe-analytics
+php81 composer.phar require jbennecker/silverstripe-analytics
 ```
 
-## 2. Run dev/build?flush
+### 2. Führe dev/build?flush aus
 
-## 3. Enter your credentials
+```
+php81 vendor/silverstripe/framework/cli-script.php dev/build
+```
 
-Go to Admin > Settings > Tracking you can enter the the Cookiebot ID and Tagmanager IDs (Google and Matomo).
-You can Google and/or Matomo TagManager.
+### 3. Gib die Tracking-IDs in das CMS ein
 
-### IMPORTANT:
-* Please configure Matomo TagManager to check "Disable Cookies" and "Bundle Tracker"
-* Cookiebot is included in manual mode
+Gehe zu Admin > Einstellungen > Tracking und gib die Cookiebot-ID und Tagmanager-IDs (Google und Matomo) ein. Du kannst Google und/oder Matomo TagManager verwenden.
 
-## 4. Include the tracking code in your template
+> WICHTIG:  
+> Bitte konfiguriere Matomo TagManager so, dass "Cookies deaktivieren" und "Tracker bündeln" aktiviert ist. Siehe Bookstack.  
+> Cookiebot ist im manuellen Modus enthalten.
 
-Put this at the top of your `<head>`.
+### 4. Füge den Tracking-Code in dein Template ein
+
+Bearbeite die Datei `app/templates/Page.ss` und importiere den Tracking-Code am Anfang deines `<head>`.
 
 ```
 <% include Tracking %>
 ```
 
-## 5. Shortcodes provided by the plugin
+## Shortcodes, die vom Plugin bereitgestellt werden
 
-* `[cookiedeclaration]` for including in data privacy notice
-* `[cookiebot]` to provide a button to edit cookiebot preferences
-* `[youtube,id="dieYoutubeId"]` to provide cookiebot consent controlled youtube media
+* `[cookiedeclaration]` zum Einbinden in die Datenschutzerklärung
+* `[cookiebot]` um einen Button zum Bearbeiten der Cookiebot-Präferenzen bereitzustellen
+* `[youtube,id="dieYoutubeId"]` zum Bereitstellen von YouTube-Medien, die von der Cookiebot-Zustimmung gesteuert werden
 
-## 6. Configure Triggers in Matomo Tag Manager
+## Konfiguriere Auslöser im Matomo Tag Manager
 
 This step is only needed if custom Tags in Matomo need to honor Cookiebot consent modes, for example Facebook Pixel etc.
 
