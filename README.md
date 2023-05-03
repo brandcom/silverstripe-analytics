@@ -16,7 +16,7 @@ php81 vendor/silverstripe/framework/cli-script.php dev/build
 
 ### 3. Gib die Tracking-IDs in das CMS ein
 
-Gehe zu Admin > Einstellungen > Tracking und gib die Cookiebot-ID und Tagmanager-IDs (Google und Matomo) ein. Du kannst Google und/oder Matomo TagManager verwenden.
+Gehe zu Admin > Einstellungen > Tracking und gib die Cookiebot-ID und Tagmanager-IDs ein. Du kannst Google und/oder Matomo TagManager verwenden.
 
 > WICHTIG:  
 > Bitte konfiguriere Matomo TagManager so, dass "Cookies deaktivieren" und "Tracker bündeln" aktiviert ist. Siehe Bookstack.  
