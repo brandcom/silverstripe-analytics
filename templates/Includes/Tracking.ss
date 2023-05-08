@@ -14,6 +14,7 @@
             wait_for_update: 500
         });
         gtag("set", "ads_data_redaction", true);
+        gtag("set", "url_passthrough", true);
     </script>
     <!-- End Google Consent Mode-->
 <% end_if %>
