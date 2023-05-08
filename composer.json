@@ -7,11 +7,17 @@
         "silverstripe"
     ],
     "require": {
-        "silverstripe/framework": "^4"
+        "silverstripe/framework": "^5"
     },
     "autoload": {
         "psr-4": {
             "jbennecker\\Analytics\\": "src/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "silverstripe/vendor-plugin": true
         }
     }
 }
