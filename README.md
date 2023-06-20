@@ -8,6 +8,12 @@
 php81 composer.phar require jbennecker/silverstripe-analytics
 ```
 
+für Silverstripe 3 wird der branch ss3 mit release ^0.3 genommen. Der Befehl unten sollte genauso funktionieren und automatisch in einem Silverstripe 3 Projekt ^0.3 installieren. 
+
+```
+php74 composer.phar require jbennecker/silverstripe-analytics
+```
+
 ### 2. Führe dev/build?flush aus
 
 ```
