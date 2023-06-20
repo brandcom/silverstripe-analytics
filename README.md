@@ -5,13 +5,13 @@
 ### 1. Installiere das Analytics-Plugin mit Composer
 
 ```
-php81 composer.phar require jbennecker/silverstripe-analytics
+php74 composer.phar require jbennecker/silverstripe-analytics
 ```
 
 ### 2. Führe dev/build?flush aus
 
 ```
-php81 vendor/silverstripe/framework/cli-script.php dev/build
+php74 framework/cli-script.php dev/build
 ```
 
 ### 3. Gib die Tracking-IDs in das CMS ein
