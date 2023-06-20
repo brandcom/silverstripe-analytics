@@ -2,11 +2,12 @@
     "name": "jbennecker/silverstripe-analytics",
     "license": "MIT",
     "description": "",
-    "type": "silverstripe-vendormodule",
+    "type": "silverstripe-module",
     "keywords": [
         "silverstripe"
     ],
     "require": {
+        "silverstripe/cms": "^3",
         "silverstripe/framework": "^3"
     },
     "autoload": {
