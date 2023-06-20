@@ -1,7 +1,6 @@
 <?php
 
-use SilverStripe\SiteConfig\SiteConfig;
-use SilverStripe\View\Parsers\ShortcodeParser;
+SS_Object::add_extension('SiteConfig', 'SiteConfigDataExtension');
 
 ShortcodeParser::get('default')->register('cookiedeclaration',
     function ($arguments, $content = null, $parser = null, $tagName = null) {

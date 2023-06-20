@@ -1,11 +1,5 @@
 <?php
 
-namespace jbennecker\Analytics;
-
-use SilverStripe\Forms\FieldList;
-use SilverStripe\Forms\TextField;
-use SilverStripe\ORM\DataExtension;
-
 class SiteConfigDataExtension extends DataExtension
 {
 
