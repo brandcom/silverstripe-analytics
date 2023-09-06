@@ -6,7 +6,16 @@ use SilverStripe\View\Parsers\ShortcodeParser;
 ShortcodeParser::get('default')->register('cookiedeclaration',
     function ($arguments, $content = null, $parser = null, $tagName = null) {
         $config = SiteConfig::current_site_config();
-        return '<script id="CookieDeclaration" src="https://consent.cookiebot.com/' . $config->CookiebotId . '/cd.js" type="text/javascript" async></script>';
+
+        if (!empty($config->CookiebotId)) {
+            return '<script id="CookieDeclaration" src="https://consent.cookiebot.com/' . $config->CookiebotId . '/cd.js" type="text/javascript" async></script>';
+        }
+
+        if (!empty($config->ClickskeksId)) {
+            return '<script id="clickskeks-disclaimer-script" src="https://static.clickskeks.at/7eace6ae-9ab8-4ed3-ad9e-822c120f7' . $config->ClickskeksId . '/disclaimer.js" async></script>';
+        }
+
+        return '';
     }
 );
 

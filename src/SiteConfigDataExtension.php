@@ -11,6 +11,7 @@ class SiteConfigDataExtension extends DataExtension
 
     private static $db = [
         'CookiebotId' => 'Varchar',
+        'ClickskeksId' => 'Varchar',
         'GoogleTagManagerID' => 'Varchar',
         'MatomoTagManagerContainerId' => 'Varchar',
     ];
@@ -20,6 +21,8 @@ class SiteConfigDataExtension extends DataExtension
         $fields->addFieldToTab("Root.Tracking",
             TextField::create("CookiebotId", 'Cookiebot Id')
                 ->setDescription('Only Cookie-blocking mode <strong>Manual</strong>'));
+
+        $fields->addFieldToTab("Root.Tracking", TextField::create("ClickskeksId", 'Clickskeks ID'));
 
         $fields->addFieldToTab("Root.Tracking",
             TextField::create("GoogleTagManagerID", 'Google TagManager ID')

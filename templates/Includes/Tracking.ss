@@ -21,6 +21,9 @@
 <% if $SiteConfig.CookiebotId %>
     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="$SiteConfig.CookiebotId" async></script>
 <% end_if %>
+<% if $SiteConfig.ClickskeksId %>
+    <script src="https://static.clickskeks.at/7eace6ae-9ab8-4ed3-ad9e-822c120f7$SiteConfig.ClickskeksId.js"></script>
+<% end_if %>
 <% if $SiteConfig.GoogleTagManagerID %>
     <!-- Google Tag Manager -->
     <script data-cookieconsent="statistics" type="text/plain">
