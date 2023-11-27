@@ -23,8 +23,8 @@ class SiteConfigDataExtension extends DataExtension
             TextField::create("CookiebotId", 'Cookiebot Id')
                 ->setDescription('Only Cookie-blocking mode <strong>Manual</strong>'));
 
-        $fields->addFieldToTab("Root.Tracking", TextField::create("ClickskeksApiKey", 'Clickskeks ID'));
-        $fields->addFieldToTab("Root.Tracking", TextField::create("ClickskeksDomain", 'Clickskeks ID'));
+        $fields->addFieldToTab("Root.Tracking", TextField::create("ClickskeksApiKey", 'ClickskeksApiKey'));
+        $fields->addFieldToTab("Root.Tracking", TextField::create("ClickskeksDomain", 'ClickskeksDomain'));
 
         $fields->addFieldToTab("Root.Tracking",
             TextField::create("GoogleTagManagerID", 'Google TagManager ID')
