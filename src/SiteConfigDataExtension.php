@@ -11,7 +11,8 @@ class SiteConfigDataExtension extends DataExtension
 
     private static $db = [
         'CookiebotId' => 'Varchar',
-        'ClickskeksId' => 'Varchar',
+        'ClickskeksApiKey' => 'Varchar',
+        'ClickskeksDomain' => 'Varchar',
         'GoogleTagManagerID' => 'Varchar',
         'MatomoTagManagerContainerId' => 'Varchar',
     ];

@@ -11,8 +11,8 @@ ShortcodeParser::get('default')->register('cookiedeclaration',
             return '<script id="CookieDeclaration" src="https://consent.cookiebot.com/' . $config->CookiebotId . '/cd.js" type="text/javascript" async></script>';
         }
 
-        if (!empty($config->ClickskeksId)) {
-            return '<script id="clickskeks-disclaimer-script" src="https://static.clickskeks.at/7eace6ae-9ab8-4ed3-ad9e-822c120f7' . $config->ClickskeksId . '/disclaimer.js" async></script>';
+        if (!empty($config->ClickskeksApiKey)) {
+            return '<div class="ccm-cookie-declaration">Bitte aktivieren Sie Javascript, um die Liste aller deklarierten Cookies und ähnlicher Techniken zu sehen.</div>';
         }
 
         return '';

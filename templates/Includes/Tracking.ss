@@ -21,8 +21,11 @@
 <% if $SiteConfig.CookiebotId %>
     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="$SiteConfig.CookiebotId" async></script>
 <% end_if %>
-<% if $SiteConfig.ClickskeksId %>
-    <script src="https://static.clickskeks.at/7eace6ae-9ab8-4ed3-ad9e-822c120f7$SiteConfig.ClickskeksId.js"></script>
+<% if $SiteConfig.ClickskeksApiKey %>
+    <script
+        src="https://mein.clickskeks.at/app.js?apiKey=$SiteConfig.ClickskeksApiKey&amp;domain=$SiteConfig.ClickskeksDomain"
+        referrerpolicy="origin"
+    ></script>
 <% end_if %>
 <% if $SiteConfig.GoogleTagManagerID %>
     <!-- Google Tag Manager -->
