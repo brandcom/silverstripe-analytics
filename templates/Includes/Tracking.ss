@@ -1,5 +1,26 @@
+<%-- Cookiebot --%>
+<% if $SiteConfig.CookiebotId %>
+    <script
+        id="Cookiebot"
+        src="https://consent.cookiebot.com/uc.js"
+        data-cbid="$SiteConfig.CookiebotId"
+        data-culture="$SiteConfig.CookiebotCulture"
+        async
+    ></script>
+<% end_if %>
+<%-- End Cookiebot --%>
+
+<%-- Clickskeks --%>
+<% if $SiteConfig.ClickskeksApiKey %>
+    <script
+        src="https://mein.clickskeks.at/app.js?apiKey=$SiteConfig.ClickskeksApiKey&amp;domain=$SiteConfig.ClickskeksDomain"
+        referrerpolicy="origin"
+    ></script>
+<% end_if %>
+<%-- End Clickskeks --%>
+
+<%-- Google Tag Manager --%>
 <% if $SiteConfig.GoogleTagManagerID %>
-    <!-- Google Consent Mode -->
     <script data-cookieconsent="ignore">
         window.dataLayer = window.dataLayer || [];
         function gtag() {
@@ -16,19 +37,6 @@
         gtag("set", "ads_data_redaction", true);
         gtag("set", "url_passthrough", true);
     </script>
-    <!-- End Google Consent Mode-->
-<% end_if %>
-<% if $SiteConfig.CookiebotId %>
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="$SiteConfig.CookiebotId" async></script>
-<% end_if %>
-<% if $SiteConfig.ClickskeksApiKey %>
-    <script
-        src="https://mein.clickskeks.at/app.js?apiKey=$SiteConfig.ClickskeksApiKey&amp;domain=$SiteConfig.ClickskeksDomain"
-        referrerpolicy="origin"
-    ></script>
-<% end_if %>
-<% if $SiteConfig.GoogleTagManagerID %>
-    <!-- Google Tag Manager -->
     <script data-cookieconsent="statistics" type="text/plain">
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -36,10 +44,11 @@
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer', '$SiteConfig.GoogleTagManagerID');
     </script>
-    <!-- End Google Tag Manager -->
 <% end_if %>
+<%-- End Google Tag Manager --%>
+
+<%-- Matomo Tag Manager --%>
 <% if $SiteConfig.MatomoTagManagerContainerId %>
-    <!-- Matomo Tag Manager -->
     <script data-cookieconsent="ignore">
         var _mtm = window._mtm = window._mtm || [];
         _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
@@ -56,6 +65,5 @@
             })
         </script>
     <% end_if %>
-
-    <!-- End Matomo Tag Manager -->
 <% end_if %>
+<%-- End Matomo Tag Manager --%>

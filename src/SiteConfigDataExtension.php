@@ -4,6 +4,7 @@ namespace jbennecker\Analytics;
 
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
+use SilverStripe\i18n\i18n;
 use SilverStripe\ORM\DataExtension;
 
 class SiteConfigDataExtension extends DataExtension
@@ -16,6 +17,19 @@ class SiteConfigDataExtension extends DataExtension
         'GoogleTagManagerID' => 'Varchar',
         'MatomoTagManagerContainerId' => 'Varchar',
     ];
+
+    /**
+     * Gibt den Sprach-Code für Cookiebot zurück
+     *
+     * @link https://support.cookiebot.com/hc/en-us/articles/360003793394-How-to-set-the-language-of-the-consent-banner
+     */
+    public function CookiebotCulture(): string
+    {
+        $locale = i18n::get_locale();
+        $locale = i18n::convert_rfc1766($locale);
+
+        return substr($locale, 0,2);
+    }
 
     public function updateCMSFields(FieldList $fields)
     {
@@ -40,6 +54,5 @@ HTML;
                 'Matomo TagManager Container ID')
                 ->setDescription($MatomoHelpText)
         );
-
     }
 }
