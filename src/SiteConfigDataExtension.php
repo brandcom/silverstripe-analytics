@@ -5,9 +5,9 @@ namespace jbennecker\Analytics;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
 use SilverStripe\i18n\i18n;
-use SilverStripe\ORM\DataExtension;
+use SilverStripe\Core\Extension;
 
-class SiteConfigDataExtension extends DataExtension
+class SiteConfigDataExtension extends Extension
 {
 
     private static $db = [
@@ -28,19 +28,22 @@ class SiteConfigDataExtension extends DataExtension
         $locale = i18n::get_locale();
         $locale = i18n::convert_rfc1766($locale);
 
-        return substr($locale, 0,2);
+        return substr($locale, 0, 2);
     }
 
     public function updateCMSFields(FieldList $fields)
     {
-        $fields->addFieldToTab("Root.Tracking",
+        $fields->addFieldToTab(
+            "Root.Tracking",
             TextField::create("CookiebotId", 'Cookiebot Id')
-                ->setDescription('Only Cookie-blocking mode <strong>Manual</strong>'));
+                ->setDescription('Only Cookie-blocking mode <strong>Manual</strong>')
+        );
 
         $fields->addFieldToTab("Root.Tracking", TextField::create("ClickskeksApiKey", 'ClickskeksApiKey'));
         $fields->addFieldToTab("Root.Tracking", TextField::create("ClickskeksDomain", 'ClickskeksDomain'));
 
-        $fields->addFieldToTab("Root.Tracking",
+        $fields->addFieldToTab(
+            "Root.Tracking",
             TextField::create("GoogleTagManagerID", 'Google TagManager ID')
         );
 
@@ -49,9 +52,12 @@ ID ist auch im TagManager Snippet src URL in "https://stats.brandcom.de/js/conta
 Bitte <strong>Disable Cookies</strong> und <strong>Bundle Tracker</strong>  in der Matomo TagManager Konfiguration einschalten!"
 HTML;
 
-        $fields->addFieldToTab("Root.Tracking",
-            TextField::create("MatomoTagManagerContainerId",
-                'Matomo TagManager Container ID')
+        $fields->addFieldToTab(
+            "Root.Tracking",
+            TextField::create(
+                "MatomoTagManagerContainerId",
+                'Matomo TagManager Container ID'
+            )
                 ->setDescription($MatomoHelpText)
         );
     }
